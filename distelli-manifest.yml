@@ -1,4 +1,4 @@
-psimkins/example-node:
+psimkins/NodeExpress:
   # Distelli Manifest example
 
   PreBuild:
