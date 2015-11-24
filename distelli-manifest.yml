@@ -30,7 +30,7 @@ psimkins/NodeExpress:
     - set +e; source ~/.nvm/nvm.sh; set -e
     - echo "-Installing nodejs-"
     - nvm install v4.2.1
-    - 'curl -o- -H "x-api-key:d837a39d074eb7a6d61c827bd24b8817c5cd2c9f40284c9" -d "deployment[application_id]=12785375" -d "deployment[description]=This deployment by Distelli" -d "deployment[revision]=$NR_APP_NAME" -d "deployment[changelog]=$NR_APP_NAME" -d "deployment[user]=Peter Simkins" "https://api.newrelic.com/deployments.xml" | bash'
+    - 'curl -o- -H "x-api-key:d837a39d074eb7a6d61c827bd24b8817c5cd2c9f40284c9" -d "deployment[application_id]=12785375" -d "deployment[description]=This deployment by Distelli" -d "deployment[revision]=$NR_APP_NAME" -d "deployment[changelog]=$NR_APP_NAME" -d "deployment[user]=Peter Simkins" "https://api.newrelic.com/deployments.xml"'
 
   InstallTemplates:
     - "views/index.jade"
