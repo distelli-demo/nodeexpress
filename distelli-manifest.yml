@@ -30,17 +30,8 @@ psimkins/NodeExpress:
     - set +e; source ~/.nvm/nvm.sh; set -e
     - echo "-Installing nodejs-"
     - nvm install v4.2.1
-    #- 'curl -o- -H "x-api-key:d837a39d074eb7a6d61c827bd24b8817c5cd2c9f40284c9" -d "deployment[application_id]=12785375" -d "deployment[description]=This deployment by Distelli" -d "deployment[revision]=$NR_APP_NAME" -d "deployment[changelog]=$NR_APP_NAME" -d "deployment[user]=Peter Simkins" "https://api.newrelic.com/deployments.xml"'
-    #- sudo echo deb http://apt.newrelic.com/debian/ newrelic non-free >> /etc/apt/sources.list.d/newrelic.list
-    #- sudo wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -
-    #- sudo apt-get -y update
-    #- sudo apt-get -y install newrelic-sysmond
-    #- sudo nrsysmond-config --set license_key=$NR_INSTALL_KEY
-    
-  Prestart:
-    - sudo /etc/init.d/newrelic-sysmond stop
-    - sudo /etc/init.d/newrelic-sysmond start
-  
+    - 'curl -o- -H "x-api-key:d837a39d074eb7a6d61c827bd24b8817c5cd2c9f40284c9" -d "deployment[application_id]=12785375" -d "deployment[description]=This deployment by Distelli" -d "deployment[revision]=$NR_APP_NAME" -d "deployment[changelog]=$NR_APP_NAME" -d "deployment[user]=Peter Simkins" "https://api.newrelic.com/deployments.xml"'
+
   InstallTemplates:
     - "views/index.jade"
 
